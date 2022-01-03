@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/VIRENV/MyProject/main/static/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href=" {% static '/VIRENV/MyProject/main/static/style.css' %} "> -->
+    <script>
+function myFun()
+{
 
+    var Fname ="Yash"
+    var Lname="Rajora"
+    var age =20
+    var newObj = { 'Fname': Fname, 
+                   'Lname': Lname,
+                   'age'  : age
+                 };
+                 var obj=JSON.stringify(newObj);
+                 var Enobj=window.btoa(obj);
+                 console.log(Enobj);
+localStorage.setItem('Enobj', Enobj);
+var e=localStorage.getItem('Enobj');
+console.log(e);
+var Deobj= window.atob(e);
+var obj1=JSON.parse(Deobj);
+console.log('Deobj:' ,obj1);
+                
+                }
 
+    </script>
 </head>
 <body>
-    <h1>Hello Div</h1>
-    <h1>Hello yash</h1>
-    <h1>Hello Anjali </h1>
+    <button id="btn" onclick="myFun()">
+        Click me
+    </button>
 </body>
 </html>
