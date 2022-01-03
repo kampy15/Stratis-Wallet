@@ -37,8 +37,8 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="../main/static/CSS/style.css" />
-   
+    <link rel="stylesheet" href="/static/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/style.scss" />
 
     <script src="/JS/script.js"></script>
   </head>
@@ -47,7 +47,7 @@
       <div class="bee-row bee-row-1">
         <div class="bee-row-content no_stack">
           <div id="img1">
-            <img src="../main/static/images/wallet.jpg" alt="">
+            <img src="/images/wallet.jpg" alt="">
           </div>
           <div class="bee-col bee-col-1 bee-col-w4">
             <div class="bee-block bee-block-1 bee-heading">
@@ -125,21 +125,56 @@
         </ul>
         
         <div class="tab-content">
-          <div id="signup">   
-            <h1>Enter your Wallet ID to get into your account </h1>
+          <div style="position: relative; " id="signup">   
+            <h1 style="position: relative; left: -12cm; top: 0;font-size: xx-large;" >Be a new part of our huge STRATIS Family, and that too free of cost :) </h1>
           
-            <div class="login-box">
-              <h2>Login</h2>
+            <div style="    position: relative;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+            border-radius: 10px;
+            height: 92vh;
+            bottom: 5cm;
+            left: 7cm;" class="login-box">
+              <h2>SignUp</h2>
               <form>
+                <!-- <div class="user-box">
+                  <input disabled type="text" name="" required="">
+                  <label> &nbsp;Wallet ID : kjw46rf54wSDSD</label>
+                </div> -->
                 <div class="user-box">
                   <input type="text" name="" required="">
-                  <label>&nbsp; Wallet ID</label>
+                  <label>&nbsp; First Name</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>&nbsp; Second Name</label>
+                </div>
+                <div class="user-box">
+                  <input type="email" name="" required="">
+                  <label>&nbsp; E-mail</label>
                 </div>
                 <div class="user-box">
                   <input type="password" name="" required="">
                   <label>&nbsp; Password</label>
                 </div>
-                <a href="#">
+                <div class="user-box">
+                  <input type="password" name="" required="">
+                  <label>&nbsp; Confirm Password</label>
+                </div>
+                <div class="user-box">
+                  <input style="position: relative; left: -1cm; top:0.5cm; width: 100px; height: 18px;" type="checkbox" name="" required="">
+                  <label>I agree with all the terms and conditions of STRATIS WALLET</label>
+                </div>
+            
+                
+                
+                <a href="main.html">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -759,6 +794,46 @@
           </div>
         </div>
       </div>
+      
+      <div style="display: none;" class="bee-row bee-row-23">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: none;" class="bee-row bee-row-23">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: none;" class="bee-row bee-row-23">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: none;" class="bee-row bee-row-23">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div style="display: none;" style="display: none" class="bee-row bee-row-24">
         <div class="bee-row-content">
           <div class="bee-col bee-col-1 bee-col-w12">
@@ -778,7 +853,7 @@
         </div>
       </div>
       <div id="img2">
-        <img src="../main/static/images/wallet.jpg" alt="">
+        <img src="/images/wallet.jpg" alt="">
       </div>
       <div  class="bee-row bee-row-26">
         <div class="bee-row-content">
@@ -863,7 +938,7 @@
                   <a href="https://www.facebook.com/">
                     <img
                       alt="Facebook"
-                      src="../main/static/images/facebook2x.png"
+                      src="/images/facebook2x.png"
                       title="facebook"
                   /></a>
                 </span>
@@ -871,7 +946,7 @@
                   <a href="https://www.twitter.com/">
                     <img
                       alt="Twitter"
-                      src="../main/static/images/facebook2x.png"
+                      src="/images/twitter2x.png"
                       title="twitter"
                   /></a>
                 </span>
@@ -880,7 +955,7 @@
                   <a href="https://www.instagram.com/">
                     <img
                       alt="Instagram"
-                      src="../main/static/images/instagram2x.png"
+                      src="/images/instagram2x.png"
                       title="instagram"
                   /></a>
                 </span>
@@ -888,7 +963,7 @@
                   <a href="https://www.youtube.com/">
                     <img
                       alt="YouTube"
-                      src="../main/static/images/youtube2x.png"
+                      src="/images/youtube2x.png"
                       title="YouTube"
                   /></a>
                 </span>
@@ -931,12 +1006,12 @@
 <a href="http://www.example.com/" target="_self" title="">
            TRANSACTIONS</a>
 </li> -->
-<a href="index.html" target="_blank" title="">
+<a href="/HTML/index.html" target="_blank" title="">
   <li>
                         HOME
                       </li>
                         </a>
-                        <a href="signup.html" target="_blank" title="">
+                        <a href="/HTML/signup.html" target="_blank" title="">
                           <li>
                                                 NEW? REGISTER
                                               </li>
