@@ -921,9 +921,15 @@ textarea {
   width:100%;
 }
 
-.forgot {
+#forgot {
   margin-top:-20px;
   text-align:right;
+  width: 12cm;
+ float: left;
+}
+#forgot a{
+
+  font-size: 15px;
 }
 
 #img1 img{
@@ -952,6 +958,7 @@ textarea {
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+    /* margin-bottom: 200px; */
   }
   
   .login-box h2 {
