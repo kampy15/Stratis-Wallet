@@ -11,5 +11,6 @@ urlpatterns = [
     path("oldTxns/",views.oldTxn,name='oldTxns'),
     path("profile/",views.profile,name='profile'),
     path("signup/",views.signup,name='signup'),
-    path("wallet/",views.wallet,name='wallet')
+    path("wallet/",views.wallet,name='wallet'),
+    path("logout/",views.logoutpage,name='logout'),
 ]
