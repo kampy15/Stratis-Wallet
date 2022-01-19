@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <title>STRATIS | E- WALLET</title>
@@ -23,7 +22,6 @@
       rel="stylesheet"
       type="text/css"
     />
-    
     <link
       href="https://fonts.googleapis.com/css?family=Oswald"
       rel="stylesheet"
@@ -40,6 +38,8 @@
       type="text/css"
     />
     <link rel="stylesheet" href="/static/CSS/style.css" />
+   
+
     <script src="/static/JS/script.js"></script>
   </head>
   <body>
@@ -61,7 +61,7 @@
                     font-size: 37px;
                     font-weight: normal;
                     letter-spacing: 12px;
-                    line-height: 90%;
+                    line-height: 95%;
                     text-align: center;
                     margin-top: 0;
                     margin-bottom: 0;
@@ -89,424 +89,47 @@
                 </label>
                 <ul class="bee-vertical with-bee-hamburger">
                 
-                  <a
-                  style="text-decoration: none"
-                  target="_blank"
-                  href="/login"
-                  >
-                  <li>
-                            LOG-IN | </li>
-         </a>
-                            <a
-                              style="text-decoration: none"
-                              target="_blank"
-                              href="/signup"
-                              >       
-                              <li>
-                            NEW? REGISTER </li>
-                          </a>
-                </ul>
-              </nav>
+
+      <div class="form">
+        <ul class="tab-group">
+        
+        </ul>
+        
+        <div class="tab-content">
+          <div id="signup">   
+            <h1>Enter your Wallet ID to get into your account </h1>
+          
+            <div class="login-box">
+              <h2>Login</h2>
+              <form action="" method="POST">
+                {% csrf_token %}
+                <div class="user-box">
+                  <input type="text" class="form-control" name="name" placeholder="Enter username">
+                  <label>&nbsp; Wallet ID</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" class="form-control" name="pas" placeholder="Enter Password">
+                  <label>&nbsp; Password</label>
+                </div>
+                <input type="Submit">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+      
+              </input>
+               
+              </form>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-2">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-divider">
-              <div class="spacer" style="height: 15px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-3">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-divider">
-              <div class="spacer" style="height: 30px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-4">
-        <div class="bee-row-content reverse">
-          <div class="bee-col bee-col-1 bee-col-w6">
-            <div class="bee-block bee-block-1 bee-heading">
-              <h1
-                style="
-                  color: #33aad8;
-                  direction: ltr;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  font-size: 52px;
-                  font-weight: normal;
-                  letter-spacing: 6px;
-                  line-height: 120%;
-                  text-align: left;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                "
-              >
-                A LITTLE ABOUT STRATIS...
-              </h1>
-            </div>
-            <div class="bee-block bee-block-2 bee-text">
-              <div
-                class="bee-text-content"
-                style="
-                  font-size: 12px;
-                  line-height: 180%;
-                  text-align: left;
-                  color: #393d47;
-                  font-family: inherit;
-                "
-              >
-                <em  >
-                  <span style="font-size: 15px; line-height: 27px">
-                    The philosophy at Stratis is to focus on how Blockchain can
-                    streamline business processes. At the same time, we realize
-                    the importance of reducing the complexity of Blockchain
-                    adoption and implementation. Our vision is to cement our
-                    position as the Microsoft .NET Blockchain Solution of choice
-                    by continuing to be the only platform enabling full-stack
-                    utilization of Microsoft’s .NET Core Framework. Furthermore,
-                    significant effort has gone into ensuring that developers
-                    with no previous experience can pick-up and become
-                    proficient with Blockchain technology in a short space of
-                    time.
-                  </span>
-                </em>
-                <p style="font-size: 15px; line-height: 27px"> </p>
-              </div>
-            </div>
-            <div class="bee-block bee-block-3 bee-button">
-              <a
-              target="_blank"
-                class="bee-button-content"
-                href="https://www.stratisplatform.com/company/"
-                style="
-                  font-size: 12px;
-                  line-height: 24px;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  background-color: #33aad8;
-                  border-bottom: 0px solid #8a3b8f;
-                  border-left: 0px solid #8a3b8f;
-                  border-radius: 20px;
-                  border-right: 0px solid #8a3b8f;
-                  border-top: 0px solid #8a3b8f;
-                  color: #ffffff;
-                  max-width: 100%;
-                  padding-bottom: 5px;
-                  padding-left: 20px;
-                  padding-right: 20px;
-                  padding-top: 5px;
-                  width: auto;
-                  display: inline-block;
-                "
-              >
-                <span
-                  style="
-                    font-size: 16px;
-                    line-height: 200%;
-                    word-break: break-word;
-                  "
-                >
-                  <span style="font-size: 22px; line-height: 44px">
-                    LEARN MORE
-                  </span>
-                </span></a
-              >
-            </div>
-          </div>
-          <div class="bee-col bee-col-2 bee-col-w6">
-            <div class="bee-block bee-block-1 bee-image">
-              <img
-                alt="STRATIS LOGO"
-                class="bee-center bee-autowidth"
-                src="/static/images/stratis-logo.png"
-                style="max-width: 300px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-5">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-divider">
-              <div class="spacer" style="height: 40px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-6">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-heading">
-              <h2
-                style="
-                  color: #33aad8;
-                  direction: ltr;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  font-size: 40px;
-                  font-weight: normal;
-                  letter-spacing: 7px;
-                  line-height: 120%;
-                  text-align: center;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                "
-              >
-                BENEFITS OF STRATIS WALLET
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bee-row bee-row-7">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w4">
-            <div class="bee-block bee-block-1 bee-heading">
-              <h3
-                style="
-                  color: #33aad8;
-                  direction: ltr;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  font-size: 24px;
-                  font-weight: normal;
-                  letter-spacing: 4px;
-                  line-height: 120%;
-                  text-align: center;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                "
-              >
-                <strong> BENEFIT #1 </strong>
+              <strong></strong>
               </h3>
             </div>
-            <div class="bee-block bee-block-2 bee-text">
-              <div
-                class="bee-text-content"
-                style="
-                  font-size: 14px;
-                  line-height: 150%;
-                  color: #393d47;
-                  font-family: inherit;
-                "
-              >
-                <p
-                  style="font-size: 14px; line-height: 21px; text-align: center"
-                >
-                  <span style="font-size: 16px; line-height: 24px">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
+                <span>
+                  <span>
                   </span>
-                </p>
-              </div>
-            </div>
-            <div class="bee-block bee-block-3 bee-button">
-              <a
-                target="_blank"
-                class="bee-button-content"
-                href="https://www.stratisplatform.com/company/"
-                style="
-                  font-size: 12px;
-                  line-height: 24px;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  background-color: #33aad8;
-                  border-bottom: 0px solid #8a3b8f;
-                  border-left: 0px solid #8a3b8f;
-                  border-radius: 20px;
-                  border-right: 0px solid #8a3b8f;
-                  border-top: 0px solid #8a3b8f;
-                  color: #ffffff;
-                  max-width: 100%;
-                  padding-bottom: 5px;
-                  padding-left: 40px;
-                  padding-right: 40px;
-                  padding-top: 5px;
-                  width: auto;
-                  display: inline-block;
-                "
-              >
-                <span
-                  style="
-                    font-size: 16px;
-                    line-height: 200%;
-                    word-break: break-word;
-                  "
-                >
-                  <span style="font-size: 22px; line-height: 44px">
-                    READ MORE
-                  </span>
-                </span></a
-              >
-            </div>
-          </div>
-          <div class="bee-col bee-col-2 bee-col-w4">
-            <div class="bee-block bee-block-1 bee-heading">
-              <h3
-                style="
-                  color: #33aad8;
-                  direction: ltr;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  font-size: 24px;
-                  font-weight: normal;
-                  letter-spacing: 4px;
-                  line-height: 120%;
-                  text-align: center;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                "
-              >
-                <strong> BENEFIT #2 </strong>
-              </h3>
-            </div>
-            <div class="bee-block bee-block-2 bee-text">
-              <div
-                class="bee-text-content"
-                style="
-                  font-size: 14px;
-                  line-height: 150%;
-                  color: #393d47;
-                  font-family: inherit;
-                "
-              >
-                <p
-                  style="font-size: 14px; line-height: 21px; text-align: center"
-                >
-                  <span style="font-size: 16px; line-height: 24px">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div class="bee-block bee-block-3 bee-button">
-              <a  target="_blank"
-                class="bee-button-content"
-                href="https://www.stratisplatform.com/company/"
-                style="
-                  font-size: 12px;
-                  line-height: 24px;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  background-color: #33aad8;
-                  border-bottom: 0px solid #8a3b8f;
-                  border-left: 0px solid #8a3b8f;
-                  border-radius: 20px;
-                  border-right: 0px solid #8a3b8f;
-                  border-top: 0px solid #8a3b8f;
-                  color: #ffffff;
-                  max-width: 100%;
-                  padding-bottom: 5px;
-                  padding-left: 40px;
-                  padding-right: 40px;
-                  padding-top: 5px;
-                  width: auto;
-                  display: inline-block;
-                "
-              >
-                <span
-                  style="
-                    font-size: 16px;
-                    line-height: 200%;
-                    word-break: break-word;
-                  "
-                >
-                  <span style="font-size: 22px; line-height: 44px">
-                    READ MORE
-                  </span>
-                </span></a
-              >
-            </div>
-          </div>
-          <div class="bee-col bee-col-3 bee-col-w4">
-            <div class="bee-block bee-block-1 bee-heading">
-              <h3
-                style="
-                  color: #33aad8;
-                  direction: ltr;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  font-size: 24px;
-                  font-weight: normal;
-                  letter-spacing: 4px;
-                  line-height: 120%;
-                  text-align: center;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                "
-              >
-                <strong> BENEFIT #3 </strong>
-              </h3>
-            </div>
-            <div class="bee-block bee-block-2 bee-text">
-              <div
-                class="bee-text-content"
-                style="
-                  font-size: 14px;
-                  line-height: 150%;
-                  color: #393d47;
-                  font-family: inherit;
-                "
-              >
-                <p
-                  style="font-size: 14px; line-height: 21px; text-align: center"
-                >
-                  <span style="font-size: 16px; line-height: 24px">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div class="bee-block bee-block-3 bee-button">
-              <a target="_blank"
-                class="bee-button-content"
-                href="https://www.stratisplatform.com/company/"
-                style="
-                  font-size: 12px;
-                  line-height: 24px;
-                  font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica,
-                    sans-serif;
-                  background-color: #33aad8;
-                  border-bottom: 0px solid #8a3b8f;
-                  border-left: 0px solid #8a3b8f;
-                  border-radius: 20px;
-                  border-right: 0px solid #8a3b8f;
-                  border-top: 0px solid #8a3b8f;
-                  color: #ffffff;
-                  max-width: 100%;
-                  padding-bottom: 5px;
-                  padding-left: 40px;
-                  padding-right: 40px;
-                  padding-top: 5px;
-                  width: auto;
-                  display: inline-block;
-                "
-              >
-                <span
-                  style="
-                    font-size: 16px;
-                    line-height: 200%;
-                    word-break: break-word;
-                  "
-                >
-                  <span style="font-size: 22px; line-height: 44px">
-                    READ MORE
-                  </span>
-                </span></a
-              >
+                </span>
+              </a>
             </div>
           </div>
         </div>
@@ -520,14 +143,59 @@
           </div>
         </div>
       </div>
-    </div>
-         
-     
-     
+      
+      <div style="display: none;" class="bee-row bee-row-21">
+        <div style="display: none;" class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div
+                class="center"
+                style="border-top: 1px solid #bbbbbb; width: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: none;" class="bee-row bee-row-22">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: none;" class="bee-row bee-row-23">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: none;" style="display: none" class="bee-row bee-row-24">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 40px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: none;" class="bee-row bee-row-25">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 30px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="img2">
         <img src="/static/images/wallet.jpg" alt="">
       </div>
-      <div class="bee-row bee-row-26">
+      <div  class="bee-row bee-row-26">
         <div class="bee-row-content">
           <div class="bee-col bee-col-1 bee-col-w4">
             <div class="bee-block bee-block-1 bee-heading">
@@ -659,17 +327,18 @@
                   margin-bottom: 0;
                 "
               >
-                <strong> Links </strong>
+              <br>
+                <strong style="margin-top: 20px;"> Links </strong>
                 <br />
               </h3>
             </div>
             <div class="bee-block bee-block-2 bee-menu">
               <nav class="bee-menu">
                 <ul class="bee-vertical">
-              
-<a href="login/" target="_blank" title="">
+                
+<a href="index.html" target="_blank" title="">
   <li>
-                        LOGIN
+                        HOME
                       </li>
                         </a>
                         <a href="signup/" target="_blank" title="">
@@ -677,7 +346,6 @@
                                                 NEW? REGISTER
                                               </li>
                                                 </a>
-                                                  
                 </ul>
               </nav>
             </div>
@@ -694,15 +362,6 @@
           </div>
         </div>
       </div>
-      <div class="bee-row bee-row-27">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-divider">
-              <!-- <div class="spacer" style="height: 30px"></div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+     
   </body>
 </html>
