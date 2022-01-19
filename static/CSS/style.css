@@ -954,7 +954,7 @@ textarea {
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background:rgba(0, 0, 0, 0.5);
+    /* background:rgba(0, 0, 0, 0.5); */
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
@@ -964,7 +964,7 @@ textarea {
   .login-box h2 {
     margin: 0 0 30px;
     padding: 0;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-align: center;
   }
   
@@ -976,10 +976,10 @@ textarea {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
+    border: 2px solid light lightblue;
+    border-top: 4px solid white;
     outline: none;
     background: transparent;
   }
@@ -989,7 +989,7 @@ textarea {
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: black;
     pointer-events: none;
     transition: .5s;
   }
@@ -999,10 +999,10 @@ textarea {
     top: -20px;
     left: 0;
     color: #03e9f4;
-    font-size: 12px;
+    font-size: 15px;
   }
-  
-  .login-box form a {
+
+  .login-box form  a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -1119,3 +1119,15 @@ textarea {
                 left: 2cm;
                 top: 5cm;
             }
+
+
+#footer{
+  font-size: 14px; 
+  line-height: 16px; 
+  text-align: left;
+  font-weight: bolder;
+  width: 10cm;
+  position: relative;
+  top: 6.5cm;
+  right: 7cm;
+}
