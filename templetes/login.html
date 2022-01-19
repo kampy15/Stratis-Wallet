@@ -104,20 +104,23 @@
               <form action="" method="POST">
                 {% csrf_token %}
                 <div class="user-box">
-                  <input type="text" class="form-control" name="name" placeholder="Enter username">
+                  <input type="text" class="form-control" name="name" required="">
                   <label>&nbsp; Wallet ID</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" class="form-control" name="pas" placeholder="Enter Password">
+                  <input type="text" class="form-control" name="pas" required="">
                   <label>&nbsp; Password</label>
                 </div>
-                <input type="Submit">
+                <a href="">
+
+                  <input style="border: hidden;" type="Submit">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-      
-              </input>
+                  
+                </input>
+              </a>
                
               </form>
             </div>

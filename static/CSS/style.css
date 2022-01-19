@@ -954,10 +954,14 @@ textarea {
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
+<<<<<<< HEAD
+    background:rgba(255, 255, 255, 0.5);
+=======
     /* background:rgba(0, 0, 0, 0.5); */
+>>>>>>> ebe5bd82118585e290e573c2751701a99137d297
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+    border-radius: 40px;
     /* margin-bottom: 200px; */
   }
   
@@ -978,7 +982,12 @@ textarea {
     font-size: 16px;
     color: rgb(0, 0, 0);
     margin-bottom: 30px;
+<<<<<<< HEAD
+    /* border: none; */
+    border: 4px solid lightblue;
+=======
     border: 2px solid light lightblue;
+>>>>>>> ebe5bd82118585e290e573c2751701a99137d297
     border-top: 4px solid white;
     outline: none;
     background: transparent;
