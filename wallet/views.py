@@ -52,5 +52,5 @@ def logoutpage(request):
     if request.user.is_authenticated:
         logout(request)
         
-    return redirect('wallet')
+    return redirect('login')
 

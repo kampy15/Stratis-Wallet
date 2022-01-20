@@ -8,8 +8,8 @@ class registerform(UserCreationForm):
     
     LastName = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control my-2','placeholder':'Enter LastName'}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control my-2','placeholder':'Enter Email'}))
-    password1=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control my-2','placeholder':'Enter Password'}))
-    password2=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control my-2','placeholder':'Confirm Password'}))
+    password1=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control my-2','placeholder':'Enter Password','type':'Password'}))
+    password2=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control my-2','placeholder':'Confirm Password','type':'Password'}))
     class Meta:
         model = User
         fields = ['username','LastName','email','password1','password2']
