@@ -11,8 +11,8 @@ def main(request):
     return render(request,'main.html')
 def newTxn(request):
     return render(request,'newTxn.html')
-def oldTxn(request):
-    return render(request,'oldTxn.html')
+def oldTxns(request):
+    return render(request,'oldTxns.html')
 def profile(request):
     return render(request,'profile.html')
 def wallet(request):
