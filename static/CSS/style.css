@@ -982,12 +982,8 @@ textarea {
     font-size: 16px;
     color: rgb(0, 0, 0);
     margin-bottom: 30px;
-<<<<<<< HEAD
     /* border: none; */
     border: 4px solid lightblue;
-=======
-    border: 2px solid light lightblue;
->>>>>>> ebe5bd82118585e290e573c2751701a99137d297
     border-top: 4px solid white;
     outline: none;
     background: transparent;
