@@ -150,31 +150,24 @@
                   <label> &nbsp;Wallet ID : kjw46rf54wSDSD</label>
                 </div> -->
                 <div class="user-box">
-                 
-                  <!-- <label>&nbsp; First Name</label> -->
-                  {{ forms.username }}
-                </div>
-               
-                <div class="user-box">
-                 
-                  <!-- <label>&nbsp;  LastName</label> -->
-                  {{ forms.LastName }}
-                </div>
-               
-                <div class="user-box">
-                 
-                  <!-- <label>&nbsp; E-mail</label> -->
-                  {{ forms.email }}
+                  <input type="text" class="form-control" name="name" required="">
+                  <label>&nbsp; First name</label>
                 </div>
                 <div class="user-box">
-                 
-                  <!-- <label>&nbsp; Password</label> -->
-                  {{ forms.password1 }}
+                  <input type="text" class="form-control" name="last_name" required="">
+                  <label>&nbsp; Last name</label>
                 </div>
                 <div class="user-box">
-                 
-                  <!-- <label>&nbsp; Confirm Password</label> -->
-                  {{ forms.password2 }}
+                  <input type="email" class="form-control" name="email" required="">
+                  <label>&nbsp; Email ID</label>
+                </div>
+                <div class="user-box">
+                  <input type="password" class="form-control" name="pas" required="">
+                  <label>&nbsp; Password</label>
+                </div>
+                <div class="user-box">
+                  <input type="password" class="form-control" name="pas1" required="">
+                  <label>&nbsp;  Re-Password</label>
                 </div>
                 <div class="user-box">
                   <input style="position: relative; left: -1cm; top:0.5cm; width: 100px; height: 18px; " type="checkbox" name="" required="">

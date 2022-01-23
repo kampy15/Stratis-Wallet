@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, HttpResponse,redirect
-from wallet.forms import registerform
+from pystratis.nodes import StraxNode
+from typing import List
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -19,18 +21,24 @@ def wallet(request):
     return render(request,'wallet.html')
 
 
-
-
 def register(request):
-    form = registerform()
+    
     if request.method=="POST":
-        form = registerform(request.POST)
-        if form.is_valid():
-            form.save()
-           
-            return redirect("login")
-    context = {'forms':form}
-    return render(request,"signup.html",context)
+        username = request.POST.get('name')
+        lastname = request.POST.get('last_name')
+        email = request.POST.get('email')
+        pas= request.POST.get('pas')
+        pas2 = request.POST.get('pas2')
+        
+        user=User.objects.create_user(username=username,email=email,password=pas,)
+        user.save()
+
+        print("user created")
+        node = StraxNode()
+        mnemonic: List[str] = node.wallet.create(name=username, password=pas, passphrase='')       
+        return redirect("login")
+    
+    return render(request,"signup.html")
 
 
 def loginpage(request):
