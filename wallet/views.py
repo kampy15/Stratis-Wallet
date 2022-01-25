@@ -1,13 +1,14 @@
+from importlib.resources import contents
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, HttpResponse,redirect
+from matplotlib.style import context
 from pystratis.nodes import StraxNode
 from typing import List
 from django.contrib.auth.models import User
 
 
-# Create your views here.
+
 def index(request):
-    # return HttpResponse("This is home page")
     return render(request,'index.html')
 def main(request):
     return render(request,'main.html')
@@ -16,10 +17,12 @@ def newTxn(request):
 def oldTxns(request):
     return render(request,'oldTxns.html')
 def profile(request):
-    return render(request,'profile.html')
+    current_user = str(request.user)
+    node = StraxNode()
+    unused_address = node.wallet.unused_address(wallet_name=current_user) 
+    return render(request,'profile.html',{'add':[unused_address]})
 def wallet(request):
     return render(request,'wallet.html')
-
 
 def register(request):
     
@@ -30,12 +33,16 @@ def register(request):
         pas= request.POST.get('pas')
         pas2 = request.POST.get('pas2')
         
+        
         user=User.objects.create_user(username=username,email=email,password=pas,)
         user.save()
 
         print("user created")
         node = StraxNode()
-        mnemonic: List[str] = node.wallet.create(name=username, password=pas, passphrase='')       
+        mnemonic: List[str] = node.wallet.create(name=username, password=pas, passphrase='') 
+             
+        # print(unused_address)
+    
         return redirect("login")
     
     return render(request,"signup.html")

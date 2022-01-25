@@ -128,7 +128,11 @@ left: 10cm;" class="">
 <div class="bee-col bee-col-1 bee-col-w6">
 <div class="bee-block bee-block-1 bee-heading">
 <h1 style="width: 50vw; color:#33aad8;font-family:'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:65px;font-weight:normal;letter-spacing:6px;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
-       WALLET BALANCE : $50000
+       WALLET BALANCE :{% block add %}
+                           {% for c in add %}
+                              <p>{{c}}</p> 
+                           {% endfor %}
+                       {% endblock%}
        </h1>
 </div>
 <BR ></BR>
@@ -136,7 +140,7 @@ left: 10cm;" class="">
 <div class="bee-text-content" style="font-size: 12px; line-height: 180%; text-align: left; color: #393d47; font-family: inherit;">
 <em >
 <span style=" font-size: 20px; line-height: 27px;">
-         WALLET ID : hEsdpKY-LO7k1F9-fT726xS-Eovs2dc
+        
          </span>
 </em>
 <p style="font-size: 15px; line-height: 27px;">
@@ -149,7 +153,7 @@ left: 10cm;" class="">
         <tr class="center ">
             <th>Name</th>
             <td>
-           <p>{{ request.user }}</p>
+           <p><input disabled type="text" name="login" value= {{ request.user }} id=""></p>
                 
             
             </td>
@@ -157,12 +161,13 @@ left: 10cm;" class="">
         <tr class="center">
             <th>Your email</th>
             <td>
-                <p>{{ request.user.email }}</p>
+                <p> <input disabled type="text" name="login" value= {{ request.user.email }} id=""></p>
             </td>
         </tr>
         <tr>
             <th>Login ID</th>
-            <td>    <input disabled type="text" name="login" value="hEsdpKY-LO7k1F9-fT726xS-Eovs2dc" id="">
+            <!-- <td>    <input disabled type="text" name="login" value= {{ add }} id=""> -->
+                
                </td>
         </tr>                                
         <tr>
