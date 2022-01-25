@@ -32,8 +32,8 @@ def register(request):
         email = request.POST.get('email')
         pas= request.POST.get('pas')
         pas2 = request.POST.get('pas2')
-        
-        
+     
+    
         user=User.objects.create_user(username=username,email=email,password=pas,)
         user.save()
 
