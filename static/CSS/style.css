@@ -491,7 +491,7 @@ p {
 	margin: 0;
 	padding: 0;
 	
-	font-weight: 300;
+	font-weight: 700;
 }
 
 body{
@@ -1123,12 +1123,18 @@ textarea {
 
 
 #footer{
+  position: relative;
   font-size: 14px; 
   line-height: 16px; 
   text-align: left;
-  font-weight: bolder;
+  font-weight: 700;
   width: 10cm;
-  position: relative;
   top: 6.5cm;
-  right: 7cm;
+  right: -14cm;
+  color: #000;
+}
+
+
+#submitBtn input:hover{
+  color: white;
 }
