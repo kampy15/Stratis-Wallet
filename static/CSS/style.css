@@ -952,12 +952,13 @@ textarea {
     top: 50%;
     left: 50%;
     width: 400px;
-    padding: 40px;
+    padding: 50px;
     transform: translate(-50%, -50%);
     background:rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 40px;
+    height: 70vh;
     /* margin-bottom: 200px; */
   }
   
@@ -1138,3 +1139,4 @@ textarea {
 #submitBtn input:hover{
   color: white;
 }
+
