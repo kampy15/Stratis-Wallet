@@ -13,7 +13,15 @@ def index(request):
 def main(request):
     return render(request,'main.html')
 def newTxn(request):
-    return render(request,'newTxn.html')
+    current_user = str(request.user)
+    node = StraxNode(blockchainnetwork=StraxTest())
+    unused_address = node.wallet.unused_address(wallet_name=current_user)
+    wallet_balance = node.wallet.balance(
+        wallet_name=current_user,
+        include_balance_by_address=False
+    )
+    balance=wallet_balance.balances[0].amount_confirmed
+    return render(request,'newTxn.html',{'add':unused_address,'bal':balance})
 def oldTxns(request):
     return render(request,'oldTxns.html')
 def profile(request):
@@ -27,7 +35,15 @@ def profile(request):
     balance=wallet_balance.balances[0].amount_confirmed
     return render(request,'profile.html',{'add':unused_address,'bal':balance})
 def wallet(request):
-    return render(request,'wallet.html')
+    current_user = str(request.user)
+    node = StraxNode(blockchainnetwork=StraxTest())
+    unused_address = node.wallet.unused_address(wallet_name=current_user)
+    wallet_balance = node.wallet.balance(
+        wallet_name=current_user,
+        include_balance_by_address=False
+    )
+    balance=wallet_balance.balances[0].amount_confirmed
+    return render(request,'wallet.html',{'add':unused_address,'bal':balance})
 
 def register(request):
     

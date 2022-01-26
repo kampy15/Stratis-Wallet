@@ -129,8 +129,8 @@ left: 10cm;" class="">
 <div style="background-color: #00000000;" class="bee-row-content reverse">
 <div class="bee-col bee-col-1 bee-col-w6">
 <div class="bee-block bee-block-1 bee-heading">
-<h1 style="width: 50vw; color:#33aad8;font-family:'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:65px;font-weight:normal;letter-spacing:6px;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
-        WALLET BALANCE :{{ add }}
+<h1 style="width: 50vw; color:#33aad8;font-family:'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:30px;font-weight:normal;letter-spacing:6px;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;">
+        WALLET ID:  {{ add }}
        </h1>
 </div>
 <BR ></BR>
@@ -161,13 +161,7 @@ left: 10cm;" class="">
             <td>
                 <p> <input disabled type="text" name="login" value= {{ request.user.email }} id=""></p>
             </td>
-        </tr>
-        <tr>
-            <th>Login ID</th>
-            <!-- <td>    <input disabled type="text" name="login" value= {{ add }} id=""> -->
-                
-               </td>
-        </tr>                                
+        </tr>                              
         <tr>
             <th>My balance</th><td>
                 <input disabled type="text" name="balance" value= {{ bal }}   id="">
