@@ -1,39 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/static/JS/script.js"></script>
-<script>
-function myFun()
-{
+<!doctype html>
+	<head>
+		<style>
+			/* CSS comes here */
+			body {
+			    padding:20px;
+			}
+			input {
+			    padding:5px;
+			    background-color:transparent;
+			    border:none;
+			    border-bottom:solid 4px #8c52ff;
+			    width:250px;
+			    font-size:16px;
+			}
+			
+			.qr-btn {
+			    background-color:#8c52ff;
+			    padding:8px;
+			    color:white;
+			    cursor:pointer;
+			}
+		</style>
+		
+		<title>JavaScript QR Code Generator</title>
+	</head>
+	<body>
+		<h3>QR Code Generator</h3>
+        <div>
+            <span id="qr-text">
+            Wallet ID:
+            </span>
+          
+        </div>
+        <br/>
+        <div>
+            <button class="qr-btn" onclick="generateQRCode()">Genarate QR Code</button>
+        </div>
+        <br/>
+        <p id="qr-result">Your QR code is:</p>
+        <canvas id="qr-code" ></canvas>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+		<script>
+		
+			var qr;
+			(function() {
+                    qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    size: 200,
+                    value: ''
+                });
+            })();
+         
+            function generateQRCode() {
+                var qrtext = document.getElementById('qr-text').innerHTML;
+                document.getElementById("qr-result").innerHTML = "QR code for " + qrtext +":";
+                // alert(qrtext);
+                qr.set({
+                    foreground: 'black',
+                    size: 200,
+                    value: qrtext
+                });
+            }
+		</script>
+        
+	</body>
+</html> 
 
-    var Fname ="Yash"
-    var Lname="Rajora"
-    var age =20
-    var newObj = { 'Fname': Fname, 
-                   'Lname': Lname,
-                   'age'  : age
-                 };
-                 var obj=JSON.stringify(newObj);
-                 var Enobj=window.btoa(obj);
-                 console.log(Enobj);
-localStorage.setItem('Enobj', Enobj);
-var e=localStorage.getItem('Enobj');
-console.log(e);
-var Deobj= window.atob(e);
-var obj1=JSON.parse(Deobj);
-console.log('Deobj:' ,obj1);
-                
-                }
 
-    </script>
-</head>
-<body>
-    <button id="btn" onclick="myFun()">
-        Click me
-    </button>
-</body>
-</html>
+
+
+
