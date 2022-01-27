@@ -11,7 +11,17 @@ from pystratis.core.networks import StraxTest
 def index(request):
     return render(request,'index.html')
 def main(request):
-    return render(request,'main.html')
+    user=str(request.user)
+    node=StraxNode(blockchainnetwork=StraxTest())
+    unused_address = node.wallet.unused_address(wallet_name=user)
+    wallet_balance = node.wallet.balance(
+        wallet_name=user,
+        include_balance_by_address=False
+    )
+    balance=wallet_balance.balances[0].amount_confirmed
+    unbalance=wallet_balance.balances[0].amount_unconfirmed
+    return render(request,'main.html',{'add':unused_address,'bal':balance,'UncBal':unbalance})
+
 def newTxn(request):
     current_user = str(request.user)
     node = StraxNode(blockchainnetwork=StraxTest())
