@@ -176,3 +176,8 @@ def logoutpage(request):
         
     return redirect('login')
 
+def address(request):
+    current_user = str(request.user)
+    node = StraxNode(blockchainnetwork=StraxTest())
+    unused_address = node.wallet.unused_address(wallet_name=current_user)
+    return render(request,"address.html",{'address':unused_address})
