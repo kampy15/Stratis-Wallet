@@ -22,7 +22,11 @@ def main(request):
     )
     balance=wallet_balance.balances[0].amount_confirmed
     unbalance=wallet_balance.balances[0].amount_unconfirmed
-    return render(request,'main.html',{'add':unused_address,'bal':balance,'UncBal':unbalance})
+    if unbalance == 0E-8:
+        uncfm= "0.00000000"
+    else :
+        uncfm=unbalance
+    return render(request,'main.html',{'add':unused_address,'bal':balance,'UncBal':uncfm})
 
 def newTxn(request):
     current_user = str(request.user)
@@ -34,7 +38,10 @@ def newTxn(request):
     )
     balance=wallet_balance.balances[0].amount_confirmed
     unbalance=wallet_balance.balances[0].amount_unconfirmed
-
+    if unbalance == 0E-8:
+        uncfm= "0.00000000"
+    else :
+        uncfm=unbalance
 
     if request.method=="POST":
         dest_add = request.POST.get('add')
@@ -84,7 +91,7 @@ def newTxn(request):
     
     
     
-    return render(request,'newTxn.html',{'add':unused_address,'bal':balance,'UncBal':unbalance})
+    return render(request,'newTxn.html',{'add':unused_address,'bal':balance,'UncBal':uncfm})
 def oldTxns(request):
     return render(request,'oldTxns.html')
 def profile(request):
