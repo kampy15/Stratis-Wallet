@@ -22,11 +22,18 @@ def main(request):
     )
     balance=wallet_balance.balances[0].amount_confirmed
     unbalance=wallet_balance.balances[0].amount_unconfirmed
+
+    if balance == 0E-8:
+        cfm= "0.00000000"
+    else :
+        cfm=unbalance
+
     if unbalance == 0E-8:
         uncfm= "0.00000000"
     else :
         uncfm=unbalance
-    return render(request,'main.html',{'add':unused_address,'bal':balance,'UncBal':uncfm})
+    
+    return render(request,'main.html',{'add':unused_address,'bal':cfm,'UncBal':uncfm})
 
 def newTxn(request):
     current_user = str(request.user)
@@ -38,6 +45,12 @@ def newTxn(request):
     )
     balance=wallet_balance.balances[0].amount_confirmed
     unbalance=wallet_balance.balances[0].amount_unconfirmed
+
+    if balance == 0E-8:
+        cfm= "0.00000000"
+    else :
+        cfm=unbalance
+
     if unbalance == 0E-8:
         uncfm= "0.00000000"
     else :
@@ -91,7 +104,7 @@ def newTxn(request):
     
     
     
-    return render(request,'newTxn.html',{'add':unused_address,'bal':balance,'UncBal':uncfm})
+    return render(request,'newTxn.html',{'add':unused_address,'bal':cfm,'UncBal':uncfm})
 def oldTxns(request):
     return render(request,'oldTxns.html')
 def profile(request):
@@ -103,7 +116,11 @@ def profile(request):
         include_balance_by_address=False
     )
     balance=wallet_balance.balances[0].amount_confirmed
-    return render(request,'profile.html',{'add':unused_address,'bal':balance})
+    if balance == 0E-8:
+        cfm= "0.00000000"
+    else :
+        cfm=balance
+    return render(request,'profile.html',{'add':unused_address,'bal':cfm})
 def wallet(request):
     current_user = str(request.user)
     node = StraxNode(blockchainnetwork=StraxTest())
