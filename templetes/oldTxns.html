@@ -81,16 +81,16 @@ bottom: 1cm; right: 5cm;" class="bee-row-content no_stack">
               <span class="bee-hamburger-close"> </span>
             </label>
             <ul class="bee-vertical with-bee-hamburger">
-              <a style=" text-decoration: none;" href="main/" target="_self" title="">
+              <a style=" text-decoration: none;" href="/main" target="_self" title="">
                 <li>MY WALLET</li>
               </a>
-              <a style="text-decoration: none;" href="profile/" target="_self" title="">
+              <a style="text-decoration: none;" href="/profile" target="_self" title="">
                 <li>PROFILE</li>
               </a>
-              <a style="color: red; text-decoration: none;" href="oldTxns/" target="_self" title="">
+              <a style="color: red; text-decoration: none;" href="/oldTxns" target="_self" title="">
                 <li>TRANSACTIONS</li>
               </a>
-              <a style="text-decoration: none;" href="newTxn/" target="_self">
+              <a style="text-decoration: none;" href="/newTxn" target="_self">
                 <li>SEND STRAX</li>
               </a>
              
@@ -100,7 +100,8 @@ bottom: 1cm; right: 5cm;" class="bee-row-content no_stack">
       </div>
     </div>
   </div>
-<a style="    width: 10vw;    position: relative;    float: right;    right: 1cm;    top: -2.5cm;" href="login/" class="btn btn-info btn-lg">
+<a style="    width: 10vw;    position: relative;    float: right;    right: 1cm;    top: -2.5cm;" href="{% url 'logout' %}"
+class="btn btn-info btn-lg">
         <span class="glyphicon glyphicon-log-out"></span> Log out
       </a>
 

@@ -23,7 +23,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="/static/CSS/style.css">
 <script src="/static/JS/script.js"></script>
- 
+<style>.newTxnDetails{
+  border: 1px solid rgb(43, 230, 236);
+  height: 30px;
+  width: 300px;
+  position: relative;
+  top: 5cm;
+  right: 16cm;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}</style>
 </head>
 <body>
       
@@ -73,16 +82,16 @@ bottom: 1cm; right: 3cm;" class="bee-row-content no_stack">
               <span class="bee-hamburger-close"> </span>
             </label>
             <ul class="bee-vertical with-bee-hamburger">
-              <a style="text-decoration: none;" href="main/" target="_self" title="">
+              <a style="text-decoration: none;" href="/main" target="_self" title="">
                 <li>MY WALLET</li>
               </a>
-              <a style="text-decoration: none;" href="profile/" target="_self" title="">
+              <a style="text-decoration: none;" href="/profile" target="_self" title="">
                 <li>PROFILE</li>
               </a>
-              <a style="text-decoration: none;" href="oldTxns/" target="_self" title="">
+              <a style="text-decoration: none;" href="/oldTxns" target="_self" title="">
                 <li>TRANSACTIONS</li>
               </a>
-              <a style="color: red; text-decoration: none;" href="newTxn/" target="_self">
+              <a style="color: red; text-decoration: none;" href="/newTxn" target="_self">
                 <li>SEND STRAX</li>
               </a>
              
@@ -93,7 +102,8 @@ bottom: 1cm; right: 3cm;" class="bee-row-content no_stack">
     </div>
   </div>
   
-<a style="    width: 10vw;    position: relative;    float: right;    right: 1cm;    top: -2.5cm;" href="login/" class="btn btn-info btn-lg">
+<a style="    width: 10vw;    position: relative;    float: right;    right: 1cm;    top: -2.5cm;" href= "{% url 'logout' %}"
+class="btn btn-info btn-lg">
         <span class="glyphicon glyphicon-log-out"></span> Log out
       </a>
 <div class="bee-row bee-row-2">
@@ -136,20 +146,24 @@ bottom: 1cm; right: 3cm;" class="bee-row-content no_stack">
 
 </div>
 </div>
+<form method="POST" action="">
+  {% csrf_token %}
 <div style="width: 6cm; height: 50vh;" >
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter Destination Address"><br>
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter Amount(in STRAX)"><br>
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter Fee"><br>
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter your username"><br>
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter your password"><br>
-        <input type="text" name="" id="" class="newTxnDetails" placeholder="Enter your wallet Address">
-<a  onclick=""
-    style="text-decoration: none; width: 7cm; position: relative;  top: 6cm; background-color: rgba(39, 207, 53, .987); padding: 10px; padding-top: 0; padding-bottom: 0;
-    left: -15cm; border-radius: 20PX; font-size: 22px; line-height: 24px; font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif; ">
-        <span  id="send" style="font-size: 22px;color: #000000;">
-VALIDATE TRANSACTION
-        </span>  
-      </a>
+        <input type="text" name="add" id="" class="newTxnDetails" placeholder="Enter Destination Address"><br>
+        <input type="text" name="amount" id="" class="newTxnDetails" placeholder="Enter Amount(in STRAX)"><br>
+        <input type="text" name="name" id="" class="newTxnDetails" placeholder="Enter your username"><br>
+        <input type="password" name="pas" id="" class="newTxnDetails" placeholder="Enter your password"><br>
+        <input type="text" name="uradd" id="" class="newTxnDetails" placeholder="Enter your wallet Address">
+        
+        <a style="position: relative; left: 2cm;" id="submitBtn" href="/main">
+
+          <input  style=" width: 100%; cursor: pointer; border: hidden;" type="Submit" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          
+        </input>
       <br>
 
       <!-- <p id="footer">
@@ -157,5 +171,7 @@ VALIDATE TRANSACTION
           POWERED BY STRATIS BLOCKCHAIN SOLUTIONS
         </b>  
         </p> -->
-</body>
+        </form>
+        </div>
+      </body>
 </html>

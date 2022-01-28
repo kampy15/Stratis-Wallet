@@ -6,7 +6,9 @@ from pystratis.nodes import StraxNode
 from typing import List
 from django.contrib.auth.models import User
 from pystratis.core.networks import StraxTest
-
+from pystratis.core import Outpoint, Recipient
+from pystratis.core.types import Money, Address
+from pystratis.api.wallet.responsemodels import SpendableTransactionsModel
 
 def index(request):
     return render(request,'index.html')
@@ -31,7 +33,58 @@ def newTxn(request):
         include_balance_by_address=False
     )
     balance=wallet_balance.balances[0].amount_confirmed
-    return render(request,'newTxn.html',{'add':unused_address,'bal':balance})
+    unbalance=wallet_balance.balances[0].amount_unconfirmed
+
+
+    if request.method=="POST":
+        dest_add = request.POST.get('add')
+        amount = request.POST.get('amount')
+        name = request.POST.get('name')
+        password = request.POST.get('pas')
+        user_add = request.POST.get('uradd')
+        node = StraxNode(blockchainnetwork=StraxTest())
+        s_txs: SpendableTransactionsModel = node.wallet.spendable_transactions(wallet_name=name)
+        s_txs = [x for x in s_txs.transactions]
+        s_txs = sorted(s_txs, key=lambda x: x.amount)
+    
+        destination_address = Address(dest_add,StraxTest())
+    
+    
+        change_address = node.wallet.balance(
+            wallet_name=name, include_balance_by_address=True).balances[0].addresses[0].address
+    
+    
+        fee_amount = Money(0.0001)
+        amount_to_send = Money(amount)
+    
+        transactions = []
+        trxid_amount = Money(0)
+        for spendable_transaction in s_txs:
+            transactions.append(spendable_transaction)
+            trxid_amount += spendable_transaction.amount
+            if trxid_amount >= amount_to_send: 
+                break
+    
+    
+        response = node.wallet.build_transaction(
+            fee_amount=fee_amount,
+            password=password,
+            segwit_change_address=False,
+            wallet_name=name,
+            account_name='account 0',
+            outpoints=[Outpoint(transaction_id=x.transaction_id, index=x.index) for x in transactions],
+            recipients=[Recipient(destination_address=destination_address, subtraction_fee_from_amount=True, amount=amount_to_send)],
+            allow_unconfirmed=False,
+            shuffle_outputs=True,
+            change_address=change_address
+        )
+    
+        response = node.wallet.send_transaction(transaction_hex=response.hex)
+        print(response.transaction_id)
+    
+    
+    
+    return render(request,'newTxn.html',{'add':unused_address,'bal':balance,'UncBal':unbalance})
 def oldTxns(request):
     return render(request,'oldTxns.html')
 def profile(request):
@@ -72,7 +125,6 @@ def register(request):
         node = StraxNode(blockchainnetwork=StraxTest())
         mnemonic: List[str] = node.wallet.create(name=username, password=pas, passphrase='') 
              
-        # print(unused_address)
     
         return redirect("login")
     

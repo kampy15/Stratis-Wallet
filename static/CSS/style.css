@@ -1145,13 +1145,4 @@ nav a{
 }
 
 
-.newTxnDetails{
-  border: 1px solid rgb(43, 230, 236);
-  height: 30px;
-  width: 300px;
-  position: relative;
-  top: 5cm;
-  right: 16cm;
-  border-radius: 20px;
-  font-size: 1.5rem;
-}
+
