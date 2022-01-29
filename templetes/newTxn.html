@@ -23,7 +23,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="/static/CSS/style.css">
 <script src="/static/JS/script.js"></script>
-<style>.newTxnDetails{
+<style>
+.newTxnDetails{
   border: 1px solid rgb(43, 230, 236);
   height: 30px;
   width: 300px;
@@ -148,22 +149,19 @@ class="btn btn-info btn-lg">
 </div>
 <form method="POST" action="">
   {% csrf_token %}
-<div style="width: 6cm; height: 50vh;" >
+<div style="position: inherit;bottom: 2cm; width: 6cm; height: 50vh;" >
         <input type="text" name="add" id="" class="newTxnDetails" placeholder="Enter Destination Address"><br>
         <input type="text" name="amount" id="" class="newTxnDetails" placeholder="Enter Amount(in STRAX)"><br>
-        <input type="text" name="name" id="" class="newTxnDetails" placeholder="Enter your username"><br>
+        <!-- <input type="text" name="name" id="" class="newTxnDetails" placeholder="Enter your username"><br> -->
         <input type="password" name="pas" id="" class="newTxnDetails" placeholder="Enter your password"><br>
-        <input type="text" name="uradd" id="" class="newTxnDetails" placeholder="Enter your wallet Address">
+        <!-- <input type="text" name="uradd" id="" class="newTxnDetails" placeholder="Enter your wallet Address"> -->
         
-        <a style="position: relative; left: 2cm;" id="submitBtn" href="/main">
+        <a style="position: relative; left: -13.5cm; top: 5cm;" id="submitBtn" href="/main">
 
-          <input  style=" width: 100%; cursor: pointer; border: hidden;" type="Submit" >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <input style="height:7vh; width: 50%; cursor: pointer; border: hidden; background-color: lawngreen;" value="Send" type="Submit" >
           
         </input>
+      </a>
       <br>
 
       <!-- <p id="footer">
