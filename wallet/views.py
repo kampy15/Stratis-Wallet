@@ -32,7 +32,6 @@ def main(request):
         uncfm= "0.00000000"
     else :
         uncfm=unbalance
-    
     return render(request,'main.html',{'add':unused_address,'bal':cfm,'UncBal':uncfm})
 
 def newTxn(request):
@@ -63,7 +62,7 @@ def newTxn(request):
         password = request.POST.get('pas')
         user_add = request.POST.get('uradd')
         node = StraxNode(blockchainnetwork=StraxTest())
-        s_txs: SpendableTransactionsModel = node.wallet.spendable_transactions(wallet_name=name)
+        s_txs: SpendableTransactionsModel = node.wallet.spendable_transactions(wallet_name=current_user)
         s_txs = [x for x in s_txs.transactions]
         s_txs = sorted(s_txs, key=lambda x: x.amount)
     
@@ -71,7 +70,7 @@ def newTxn(request):
     
     
         change_address = node.wallet.balance(
-            wallet_name=name, include_balance_by_address=True).balances[0].addresses[0].address
+            wallet_name=current_user, include_balance_by_address=True).balances[0].addresses[0].address
     
     
         fee_amount = Money(0.0001)
@@ -90,7 +89,7 @@ def newTxn(request):
             fee_amount=fee_amount,
             password=password,
             segwit_change_address=False,
-            wallet_name=name,
+            wallet_name=current_user,
             account_name='account 0',
             outpoints=[Outpoint(transaction_id=x.transaction_id, index=x.index) for x in transactions],
             recipients=[Recipient(destination_address=destination_address, subtraction_fee_from_amount=True, amount=amount_to_send)],
