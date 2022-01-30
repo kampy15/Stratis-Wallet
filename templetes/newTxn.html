@@ -150,20 +150,28 @@ class="btn btn-info btn-lg">
 <form method="POST" action="">
   {% csrf_token %}
 <div style="position: inherit;bottom: 2cm; width: 6cm; height: 50vh;" >
-        <input type="text" name="add" id="" class="newTxnDetails" placeholder="Enter Destination Address"><br>
-        <input type="text" name="amount" id="" class="newTxnDetails" placeholder="Enter Amount(in STRAX)"><br>
+        <input disabled type="text" name="add" id="" class="newTxnDetails" value="qXi54cEGLrZiYJtGt1AipzHMuZEGbbJXYf" placeholder="Enter Destination Address"><br>
+        <input disabled type="text" name="amount" id="" class="newTxnDetails" placeholder="Enter Amount(in STRAX)" value="1"><br>
         <!-- <input type="text" name="name" id="" class="newTxnDetails" placeholder="Enter your username"><br> -->
         <input type="password" name="pas" id="" class="newTxnDetails" placeholder="Enter your password"><br>
         <!-- <input type="text" name="uradd" id="" class="newTxnDetails" placeholder="Enter your wallet Address"> -->
         
         <a style="position: relative; left: -13.5cm; top: 5cm;" id="submitBtn" href="/main">
 
-          <input style="height:7vh; width: 50%; cursor: pointer; border: hidden; background-color: lawngreen;" value="Send" type="Submit" >
-          
+          <input onclick="txn()" style="height:7vh; width: 50%; cursor: pointer; border: hidden; background-color: lawngreen;" value="Send" type="Submit" >
+          <script>
+            function txn() {
+              alert("Your Transaction is succesfully Completed !!!");
+              window.open("https://www.codewithharry.com/videos/python-django-tutorials-hindi-79");
+              
+            }
+            </script>
         </input>
       </a>
       <br>
-
+        <div>
+          <!-- <p>  {{Txid}} </p> -->
+        </div>
       <!-- <p id="footer">
         <b>
           POWERED BY STRATIS BLOCKCHAIN SOLUTIONS
